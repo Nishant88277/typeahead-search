@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Typeahead from "./typeahead";
 
 export default function Home() {

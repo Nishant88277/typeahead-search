@@ -4,6 +4,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Input } from "@/components/ui/input";
 import { debounce } from "lodash";
+import { HighlightMatch } from "@/lib/highlight";
 
 // Mock API function to fetch suggestions
 const fetchSuggestions = async (query: string): Promise<string[]> => {
@@ -135,7 +136,7 @@ export default function Typeahead() {
                       index === activeIndex ? "bg-gray-100" : ""
                     } hover:bg-gray-100`}
                   >
-                    {item}
+                    {HighlightMatch(item, query)}
                   </li>
                 ))
               )}

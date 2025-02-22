@@ -1,4 +1,4 @@
-const HighlightMatch = (text: string, query: string) => {
+export const HighlightMatch = (text: string, query: string) => {
     const parts = text.split(new RegExp(`(${query})`, "gi"));
     return (
       <span>
